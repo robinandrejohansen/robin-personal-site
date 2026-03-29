@@ -152,11 +152,12 @@ function ChapterBlock({ chapter, index }: { chapter: typeof chapters[0]; index: 
         <div
           style={{
             fontFamily: "var(--mono)",
-            fontSize: 12,
-            lineHeight: 1.9,
-            color: "var(--ink-muted)",
+            fontSize: 14,
+            lineHeight: 2,
+            color: "var(--ink)",
             whiteSpace: "pre-line",
-            maxWidth: 580,
+            maxWidth: 620,
+            opacity: 0.85,
           }}
         >
           {chapter.content}
@@ -416,7 +417,7 @@ export default function Story() {
                   { year: "2013", event: "First jailbreak" },
                   { year: "2018", event: "Champions League futsal" },
                   { year: "2023", event: "Started coding with AI" },
-                  { year: "2024", event: "Built with YC founder" },
+                  { year: "2025", event: "Built with YC founder" },
                   { year: "2025", event: "4 products shipped" },
                   { year: "2026", event: "Building Openfnder" },
                 ].map((m) => (

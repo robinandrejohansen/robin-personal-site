@@ -7,11 +7,11 @@ export default function CustomCursor() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const springX = useSpring(mouseX, { stiffness: 500, damping: 35 });
-  const springY = useSpring(mouseY, { stiffness: 500, damping: 35 });
+  const springX = useSpring(mouseX, { stiffness: 1000, damping: 50, mass: 0.1 });
+  const springY = useSpring(mouseY, { stiffness: 1000, damping: 50, mass: 0.1 });
 
-  const trailX = useSpring(mouseX, { stiffness: 100, damping: 30 });
-  const trailY = useSpring(mouseY, { stiffness: 100, damping: 30 });
+  const trailX = useSpring(mouseX, { stiffness: 300, damping: 40, mass: 0.2 });
+  const trailY = useSpring(mouseY, { stiffness: 300, damping: 40, mass: 0.2 });
 
   const isHovering = useRef(false);
 

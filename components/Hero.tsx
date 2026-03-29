@@ -143,6 +143,38 @@ export default function Hero() {
           <TypeWriter text={TAGLINE} />
         </motion.p>
 
+        {/* Story CTA */}
+        <motion.div variants={fadeUp} className="mb-8">
+          <a
+            href="/story"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 12,
+              fontFamily: "var(--mono)",
+              fontSize: 12,
+              color: "var(--ink)",
+              textDecoration: "none",
+              cursor: "none",
+              padding: "12px 20px",
+              border: "1px solid var(--ink)",
+              backgroundColor: "var(--surface)",
+              letterSpacing: "0.06em",
+              transition: "all 0.2s ease",
+            }}
+            className="hover:bg-[var(--ink)] hover:text-[var(--bg)]"
+          >
+            <span style={{ 
+              width: 6, 
+              height: 6, 
+              backgroundColor: "var(--accent)",
+              borderRadius: "50%",
+            }} />
+            Read my story — from jailbreaking to YC
+            <span style={{ marginLeft: 4 }}>→</span>
+          </a>
+        </motion.div>
+
         {/* Project quick links */}
         <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
           {[

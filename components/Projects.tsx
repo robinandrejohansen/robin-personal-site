@@ -25,7 +25,7 @@ const projects = [
       "An AI agent that handles property inquiries via natural voice conversation — qualifying leads, answering questions, booking viewings. Built with a YC founder.",
     url: "dimora.no",
     href: "https://dimora.no",
-    year: "2024",
+    year: "2025",
     tags: ["Voice AI", "Real Estate", "YC"],
     status: "LIVE",
     featured: true,

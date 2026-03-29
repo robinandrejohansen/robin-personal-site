@@ -15,7 +15,7 @@ const credentials = [
     icon: <YCLogo />,
     label: "Y Combinator",
     description: "Built Dimora with a YC founder",
-    year: "2024",
+    year: "2025",
   },
   {
     icon: (
