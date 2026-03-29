@@ -30,14 +30,14 @@ const credentials = [
         color: "var(--bg)",
         fontFamily: "var(--serif)",
         fontWeight: 500,
-        fontSize: 14,
+        fontSize: 13,
       }}>
-        4
+        20+
       </div>
     ),
-    label: "Products shipped",
-    description: "AI-native apps across domains",
-    year: "2024–26",
+    label: "Countries",
+    description: "Pep Football used globally",
+    year: "2025",
   },
   {
     icon: (
@@ -47,17 +47,19 @@ const credentials = [
         display: "flex", 
         alignItems: "center", 
         justifyContent: "center",
-        border: "1px solid var(--border)",
+        backgroundColor: "var(--ink)",
         borderRadius: 4,
+        color: "var(--bg)",
+        fontFamily: "var(--serif)",
+        fontWeight: 500,
+        fontSize: 14,
       }}>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-        </svg>
+        4
       </div>
     ),
-    label: "Full-stack",
-    description: "Design → Code → Ship",
-    year: "",
+    label: "Products shipped",
+    description: "AI-native apps across domains",
+    year: "2024–26",
   },
 ];
 
@@ -66,13 +68,13 @@ export default function Credentials() {
   const inView = useInView(ref, { once: true, margin: "-40px" });
 
   return (
-    <section ref={ref} className="px-6 lg:px-12 py-16">
+    <section ref={ref} className="px-6 lg:px-12 py-20 lg:py-28">
       {/* Label */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ duration: 0.5 }}
-        className="flex items-center gap-4 mb-10"
+        className="flex items-center gap-4 mb-12 lg:mb-16"
       >
         <span
           style={{

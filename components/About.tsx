@@ -15,13 +15,13 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="about" ref={ref} className="px-6 lg:px-12 py-24">
+    <section id="about" ref={ref} className="px-6 lg:px-12 py-32 lg:py-40">
       {/* Section header */}
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
-        className="mb-12"
+        className="mb-16 lg:mb-20"
       >
         <div className="flex items-center gap-4 mb-2">
           <span

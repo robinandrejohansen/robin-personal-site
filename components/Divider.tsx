@@ -8,7 +8,7 @@ export default function Divider({ label }: { label?: string }) {
   const inView = useInView(ref, { once: true });
 
   return (
-    <div ref={ref} className="px-6 lg:px-12">
+    <div ref={ref} className="px-6 lg:px-12 py-8 lg:py-12">
       <motion.div
         initial={{ scaleX: 0 }}
         animate={inView ? { scaleX: 1 } : {}}
@@ -27,7 +27,7 @@ export default function Divider({ label }: { label?: string }) {
             letterSpacing: "0.14em",
             textTransform: "uppercase",
             color: "var(--ink-faint)",
-            marginTop: 6,
+            marginTop: 10,
           }}
         >
           {label}

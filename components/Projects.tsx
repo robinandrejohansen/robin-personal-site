@@ -33,13 +33,13 @@ const projects = [
   {
     id: "003",
     name: "Pep Football",
-    tagline: "AI soccer coaching app",
+    tagline: "AI soccer coaching app — used in 20+ countries",
     description:
-      "A virtual football coach in your pocket. Delivers drills, tactical analysis, and personalised training plans based on your position and goals. Available on App Store.",
+      "A virtual football coach in your pocket. Delivers drills, tactical analysis, and personalised training plans based on your position and goals. Used by players in 20+ countries.",
     url: "pepfootball.com",
     href: "https://pepfootball.com",
     year: "2025",
-    tags: ["AI Coach", "React Native", "App Store"],
+    tags: ["AI Coach", "React Native", "App Store", "20+ Countries"],
     status: "APP STORE",
   },
   {
@@ -77,7 +77,7 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
         className="group"
       >
         <div
-          className="py-8 border-b transition-all duration-300"
+          className="py-10 lg:py-12 border-b transition-all duration-300"
           style={{
             borderColor: "var(--border)",
             backgroundColor: (project as Project & { featured?: boolean }).featured ? "rgba(212,82,42,0.02)" : "transparent",
@@ -213,14 +213,14 @@ export default function Projects() {
   const inView = useInView(headerRef, { once: true, margin: "-60px" });
 
   return (
-    <section id="work" className="px-6 lg:px-12 py-24">
+    <section id="work" className="px-6 lg:px-12 py-32 lg:py-40">
       {/* Section header */}
       <motion.div
         ref={headerRef}
         initial={{ opacity: 0, y: 12 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="mb-12"
+        className="mb-16 lg:mb-20"
       >
         <div className="flex items-center gap-4 mb-2">
           <span
