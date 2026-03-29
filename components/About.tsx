@@ -107,11 +107,29 @@ export default function About() {
                 fontSize: 12,
                 lineHeight: 1.85,
                 color: "var(--ink-muted)",
+                marginBottom: 20,
               }}
             >
               The pattern: an AI agent with deep domain knowledge, a clean interface that gets
               out of the way, and a distribution channel the target user already trusts.
             </p>
+            <a
+              href="/story"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                fontFamily: "var(--mono)",
+                fontSize: 11,
+                color: "var(--accent)",
+                textDecoration: "none",
+                cursor: "none",
+                letterSpacing: "0.06em",
+              }}
+              className="hover:underline"
+            >
+              Read the full story →
+            </a>
           </div>
         </motion.div>
 

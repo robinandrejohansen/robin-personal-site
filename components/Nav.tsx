@@ -4,9 +4,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 
 const links = [
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Work", href: "/#work" },
+  { label: "Story", href: "/story" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Nav() {
@@ -24,7 +24,7 @@ export default function Nav() {
       }}
     >
       <motion.a
-        href="#"
+        href="/"
         className="font-mono text-[11px] tracking-[0.15em] uppercase text-[var(--ink)]"
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
