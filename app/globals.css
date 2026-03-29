@@ -79,11 +79,63 @@ body {
 .tag {
   display: inline-block;
   border: 1px solid var(--border);
-  padding: 2px 8px;
+  padding: 3px 10px;
   font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-muted);
+  transition: all 0.2s ease;
+}
+
+/* Premium shadow utility */
+.shadow-premium {
+  box-shadow: 
+    0 1px 2px rgba(12,12,10,0.02),
+    0 4px 8px rgba(12,12,10,0.03),
+    0 12px 24px rgba(12,12,10,0.04);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-muted) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtle hover lift */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 4px 12px rgba(12,12,10,0.06),
+    0 20px 40px rgba(12,12,10,0.08);
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(248,246,241,0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Accent glow */
+.accent-glow {
+  box-shadow: 0 0 0 1px var(--accent), 0 4px 20px rgba(212,82,42,0.15);
+}
+
+/* Featured card highlight */
+.featured-card {
+  position: relative;
+}
+.featured-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212,82,42,0.04) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 /* Blinking cursor */

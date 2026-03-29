@@ -6,18 +6,32 @@ import { useRef } from "react";
 const projects = [
   {
     id: "001",
-    name: "Dimora",
-    tagline: "Virtual voice AI real estate agent",
+    name: "Openfnder",
+    tagline: "Cursor for product management",
     description:
-      "An AI agent that handles property inquiries via natural voice conversation — qualifying leads, answering questions, booking viewings. Built for Norwegian real estate agencies.",
-    url: "dimora.no",
-    href: "https://dimora.no",
-    year: "2024",
-    tags: ["Voice AI", "Real Estate", "Web"],
-    status: "LIVE",
+      "AI-native product management — auto-generates specs, syncs with your codebase, and keeps stakeholders aligned. One tool for the entire product lifecycle.",
+    url: "openfnder.com",
+    href: "https://openfnder.com",
+    year: "2026",
+    tags: ["AI Agent", "Product Management", "SaaS"],
+    status: "BUILDING",
+    featured: true,
   },
   {
     id: "002",
+    name: "Dimora",
+    tagline: "Virtual voice AI real estate agent",
+    description:
+      "An AI agent that handles property inquiries via natural voice conversation — qualifying leads, answering questions, booking viewings. Built with a YC founder.",
+    url: "dimora.no",
+    href: "https://dimora.no",
+    year: "2024",
+    tags: ["Voice AI", "Real Estate", "YC"],
+    status: "LIVE",
+    featured: true,
+  },
+  {
+    id: "003",
     name: "Pep Football",
     tagline: "AI soccer coaching app",
     description:
@@ -29,7 +43,7 @@ const projects = [
     status: "APP STORE",
   },
   {
-    id: "003",
+    id: "004",
     name: "SwingCoach",
     tagline: "AI golf swing analysis",
     description:
@@ -42,7 +56,9 @@ const projects = [
   },
 ];
 
-function ProjectRow({ project, index }: { project: typeof projects[0]; index: number }) {
+type Project = typeof projects[0];
+
+function ProjectRow({ project, index }: { project: Project; index: number }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px 0px" });
 
@@ -64,6 +80,11 @@ function ProjectRow({ project, index }: { project: typeof projects[0]; index: nu
           className="py-8 border-b transition-all duration-300"
           style={{
             borderColor: "var(--border)",
+            backgroundColor: (project as Project & { featured?: boolean }).featured ? "rgba(212,82,42,0.02)" : "transparent",
+            marginLeft: -24,
+            marginRight: -24,
+            paddingLeft: 24,
+            paddingRight: 24,
           }}
         >
           {/* Row top: number + name + status + year */}
@@ -155,7 +176,18 @@ function ProjectRow({ project, index }: { project: typeof projects[0]; index: nu
             {/* Tags + URL */}
             <div className="flex items-center flex-wrap gap-2">
               {project.tags.map((t) => (
-                <span key={t} className="tag">{t}</span>
+                <span 
+                  key={t} 
+                  className="tag"
+                  style={t === "YC" ? { 
+                    backgroundColor: "#FF6600", 
+                    color: "white", 
+                    borderColor: "#FF6600",
+                    fontWeight: 700,
+                  } : {}}
+                >
+                  {t}
+                </span>
               ))}
               <span
                 style={{

@@ -146,6 +146,7 @@ export default function Hero() {
         {/* Project quick links */}
         <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
           {[
+            { label: "openfnder.com", href: "https://openfnder.com", accent: true },
             { label: "dimora.no", href: "https://dimora.no" },
             { label: "pepfootball.com", href: "https://pepfootball.com" },
             { label: "swingcoach", href: "https://golf-coach-two.vercel.app" },
@@ -156,7 +157,12 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="tag hover:border-[var(--ink)] hover:text-[var(--ink)] transition-colors"
-              style={{ textDecoration: "none", cursor: "none" }}
+              style={{ 
+                textDecoration: "none", 
+                cursor: "none",
+                borderColor: (p as { accent?: boolean }).accent ? "var(--accent)" : undefined,
+                color: (p as { accent?: boolean }).accent ? "var(--accent)" : undefined,
+              }}
             >
               ↗ {p.label}
             </a>
